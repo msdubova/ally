@@ -5,79 +5,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessibility</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="">News</a></li>
-                <li><a href="">Options</a></li>
-                <li><a href="">Tech</a></li>
-                <li><a href="">Sport</a></li>
-                <li><a href="">Culture</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Lifestyle</a></li>
-                <li><a href="">Jobs</a></li>
-
+    <header class="header">
+        <nav class="nav" role="navigation">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#some" class="nav__link">News</a></li>
+                <li class="nav__item"><a href="#some" class="nav__link">Options</a></li>
+                <li class="nav__item"><a href="#some" class="nav__link">Tech</a></li>
+                <li class="nav__item"><a href="#some" class="nav__link">Sport</a></li>
+                <li class="nav__item"><a href="#some" class="nav__link">Culture</a></li>
+                <li class="nav__item"><a href="#some" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#some" class="nav__link">Lifestyle</a></li>
+                <li class="nav__item"><a href="#some" class="nav__link">Jobs</a></li>
             </ul>
         </nav>
-        <div>
-            <p>We aim to make this site accessible to a wide audience and to ensure a great experience for all users by
-                conforming to World Wide Web
-                Consortium accessibility guidelines (W3C's WCAG)
+        <button id="theme-toggle" class="light-dark__button">☀️</button>
+
+        <div class="accessibility-options">
+            <p class="accessibility-options__text">We aim to make this site accessible to a wide audience and to ensure
+                a great experience for all users by conforming to World Wide Web Consortium accessibility guidelines
+                (W3C's WCAG).
                 However, if you are having trouble reading this website you can change the way it looks or disable some
                 of its functionalities.</p>
-            <label for="preferences">Allow flashing elements Untick this to disable flashing and moving elements</label>
-            <input type="checkbox" name="flash" id="preferences">
+            <p>
+                <input type="checkbox" name="flash" id="preferences" class="accessibility-options__checkbox-input"
+                    checked>
+                <label for="preferences" class="accessibility-options__label">
+
+                    <span class="accessibility-options__custom-checkbox"></span>
+                    Allow flashing elements
+                </label>
+            </p>
+
         </div>
     </header>
-    <main>
-        <h1><a href="index.html">Tech Returner News</a></h1>
-        <section id="Introduction">
-            <h2>Accessibility Features: Easy Wins</h2>
-            <h3>Handy tips on how to create accessible websites for everyone</h3>
+    <main class="main" role="main">
+        <h1 class="main__heading"><a href="index.html" class="logo">Tech Returner News</a></h1>
 
-            <p>
-                <a mailto="jimmy.eggs@hotmail.com">Jim Eggs</a>
-                <time datetime="2021-08-04">04.08.21</time>
+        <article class="article">
+            <h2 class="article__title">Accessibility Features: Easy Wins</h2>
+            <h3 class="article__subtitle">Handy tips on how to create accessible websites for everyone</h3>
+            <p class="article__author">
+                <a href="mailto:jimmy.eggs@hotmail.com" class="article__author-link">Jim Eggs</a>
+                <time datetime="2021-08-04" class="article__date">04.08.21</time>
             </p>
-            <img src="" alt="Content picture of globe">
+            <nav role="navigation">
+                <ul class="sub-nav">
+                    <li class="sub-nav__item sub-nav__item--active"><a href="#introduction"
+                            class="sub-nav__link">Introduction</a></li>
+                    <li class="sub-nav__item"><a href="#checks" class="sub-nav__link">Accessibility Checks</a></li>
+                    <li class="sub-nav__item"><a href="#conclusion" class="sub-nav__link">Conclusion</a></li>
+                </ul>
+            </nav>
+            <div class="article__header">
+                <img src="globe.jpg" alt="Content picture of globe" class="article__image">
+                <aside class="article__related" role="navigation">
+                    <h4 class="article__subheading">What would a truly accessible city look like? <a href="#"
+                            class="article__read-more">Read more..</a></h4>
+                    <div class="side-nav">
+                        <h5 class="side-nav__heading">More stories</h5>
+                        <ul class="side-nav__list">
+                            <li class="side-nav__item"><a href="#" class="side-nav__link">Tokyo Olympics: gold for Great
+                                    Britain!</a></li>
+                            <li class="side-nav__item"><a href="#" class="side-nav__link">A day in the life of</a></li>
+                            <li class="side-nav__item"><a href="#" class="side-nav__link">Call for action as UK driver
+                                    shortage hits supermarkets</a></li>
+                            <li class="side-nav__item"><a href="#" class="side-nav__link">The six worst school sports
+                                    memories of your childhood</a></li>
+                            <li class="side-nav__item"><a href="#" class="side-nav__link">Clairvoyants evening cancelled
+                                    from unforeseen circumstances</a></li>
+                            <li class="side-nav__item"><a href="#" class="side-nav__link">Safety meeting ends in
+                                    accident</a></li>
+                            <li class="side-nav__item"><a href="#" class="side-nav__link">Russian traffic officer with
+                                    golden toilet is arrested after police uncover massive bribery scheme</a></li>
+                            <li class="side-nav__item"><a href="#" class="side-nav__link">Jellyfish apocalypse is coming
+                                    claim scientists</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+            <section class="article__content" id="introduction">
+                Tim Berners Lee dreamt of a World Wide Web that would be free and accessible to everyone. Sadly, the
+                modern
+                web is littered with poorly designed websites and difficult to navigate code (for both developers and
+                users).
+                This often comes down to a lack of understanding around different user needs. Designing pages that are
+                accessible for everyone shouldn’t be too difficult. The developers at Tech Returners News have collated
+                an
+                'easy wins' checklist for Web page accessibility. Keep this guide handy... When creating your own
+                websites
+                you can check these criteria off the list!
+            </section>
+            <section class="article__content" id="checks">
+                <h2>Accessibility Checks</h2>
+                <p>Heading elements & Page Titles: HTML heading elements have been used to represent page structure,
+                    supporting
+                    assistive technologies that allow page navigation from heading to heading.</p>
+                <p>Re-size Text: You can vary text size by using your browser's text resize settings (through Options or
+                    Preferences),
+                    text-only zoom, page zoom (which also zooms images, buttons etc) without incurring styling issues /
+                    text over-lapping
+                    or being cut off the page.</p>
+                <p>Alternative text for images: All images have been given appropriate alternative text.</p>
+                <p>Link text: All hyperlinks should make sense when read out of context, and hyperlinks are clearly
+                    presented in
+                    a different text style from normal body text. If a link opens in a new browser page, it has been
+                    labelled as doing so.</p>
+                <p>JavaScript independence: Where JavaScript or other scripts are used for navigation or functionality,
+                    an alternative
+                    mechanism has been put in place in case your browser does not support these scripts.</p>
+                <p>Colour contrast: has been checked for text and background colour combinations to ensure that the
+                    contrast is
+                    sufficient and I have also ensured that information is not referenced by colour alone.</p>
+                <p>Style sheets: If style sheets are not supported or are turned off, information on the site can still
+                    be accessed
+                    and read.</p>
+                <p>Forms: forms are marked up correctly so people can interact with them using only the keyboard, voice
+                    input or
+                    screen readers. The form labels themselves are clickable, increasing the target area and making it
+                    easier to
+                    select small radio buttons of checkboxes.</p>
+            </section>
+            <section class="article__content" id="conclusion">
+                <h2>Conclusion</h2>
+                <p>By spending just a little more time on getting the building blocks of the web right, developers can
+                    help create
+                    an Internet that works for everyone.</p>
+            </section>
 
-            <p>Tim Berners Lee dreamt of a World Wide Web that would be free and accessible to everyone. Sadly, the
-                modern web is littered with
-                poorly designed websites and difficult to navigate code (for both developers and users). This often
-                comes down to a lack of
-                understanding around different user needs.
-                Designing pages that are accessible for everyone shouldn’t be too difficult. The developers at Tech
-                Returners News have collated an
-                ‘easy wins' checklist for Web page accessibility.
-                Keep this guide handy... When creating your own websites you can check these criteria off the list!
-            </p>
-            <p>
-            <h4>What would a truly accessible city look like? <a>Read more..</a></h4>
-            </p>
-            <p>
-                For more information on Web Accessibility view: Easy Checks – A First Review of Web Accessibility
-            </p>
-        </section>
+            <div class="article__related">
+                <p><a href="#" class="article__more-info">For more information on Web Accessibility view: Easy Checks –
+                        A First Review of Web Accessibility</a></p>
+            </div>
+        </article>
     </main>
-    <footer>
-        <nav>
-            <ul>
-
-
-                <li><a href="">News</a></li>
-                <li><a href="">Options</a></li>
-                <li><a href="">Tech</a></li>
-                <li><a href="">Sport</a></li>
-                <li><a href="">Culture</a></li>
+    <footer class="footer">
+        <nav class="footer-nav" role="navigation">
+            <ul class="footer-nav__list">
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">News</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Options</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Tech</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Sport</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Culture</a></li>
             </ul>
         </nav>
-        <a href="">
+        <a href="" class="footer__copyright">
             © 2021 Tech Returners News
         </a>
     </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>
